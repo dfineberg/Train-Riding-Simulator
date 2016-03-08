@@ -1,0 +1,24 @@
+DisplaceY
+
+DisplaceY is a Displacement deformer which driven by a 2D Texture or Sequence of Images.
+It create a true surface bump by changing the topology of the object, 
+Its actually moves the vertices of the object around Depends on Texture and vertices normals.
+The whiter the map is, the farther out it pushes the geometry, and the blacker of the map is, the farther in it pushes the geometry.
+With DisplaceY, depressions and elevations become part of the geometry of the object, changing the topology, 
+unlike Bump maps that only create the illusion of surface relief.
+You can deform every geometry with your own painted Textures, or any texture.
+
+Because DisplaceY create true surface relief(Bump), they:
+* can cast or receive shadows.
+* can be seen if you silhouette the object.
+
+It can be used to simulate any surface relief(Bump), Waves, rocks, Talking face(sequence of images), Changing terrain topology at runtime, ...etc.
+
+
+How to use:-
+
+* drag the script on the object you want to make Displacement on it.
+* It will consider the grayscale of the texture on material as Displacement map
+* In texture import sittings (advance) make sure the read/write check box is checked.
+* If you want to use Sequence of images, drag the "PlaySequence" script on the object and fill the "Sequence" array field with your images
+and make sure the "AnimatDisplacment" check box on the DisplaceY component is checked, and press play.
